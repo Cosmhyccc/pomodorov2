@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodorooooo</h1>
+        
+        <div class="timer-container">
+            <div class="timer">
+                <span id="minutes">25</span>
+                <span class="separator">:</span>
+                <span id="seconds">00</span>
+            </div>
+            
+            <div class="timer-label" id="timer-label">FOCUS TIME</div>
+            
+            <div class="progress-ring">
+                <svg height="240" width="240">
+                    <circle
+                        class="progress-ring-circle-bg"
+                        stroke-width="8"
+                        fill="transparent"
+                        r="110"
+                        cx="120"
+                        cy="120"
+                    />
+                    <circle
+                        class="progress-ring-circle"
+                        stroke-width="8"
+                        fill="transparent"
+                        r="110"
+                        cx="120"
+                        cy="120"
+                    />
+                </svg>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="start" class="btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="pause" class="btn hidden">
+                <i class="fas fa-pause"></i>
+            </button>
+            <button id="reset" class="btn">
+                <i class="fas fa-redo-alt"></i>
+            </button>
+        </div>
+        
+        <div class="settings">
+            <div class="setting">
+                <label for="focus-time">Focus Time (min)</label>
+                <input type="number" id="focus-time" min="1" max="60" value="25">
+            </div>
+            <div class="setting">
+                <label for="break-time">Break Time (min)</label>
+                <input type="number" id="break-time" min="1" max="30" value="5">
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
